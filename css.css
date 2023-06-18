@@ -1,0 +1,76 @@
+html {
+    zoom: 0.85;
+    background-color: #333;
+}
+
+.btns {
+    margin-left: 25px;
+}
+
+.btns button {
+    font-size: 3.5vh;
+}
+
+.editor {
+    float: left;
+    height: 70vh;
+    width: 48vw;
+    font-size: 15px;
+    margin-left: 25px;
+}
+
+h1 {
+    margin-left: 45vw;
+    font-size: 9vh;
+    color: aliceblue;
+}
+
+.btn-clear:hover {
+    background-color: red;
+    color: white;
+}
+
+.btn-compile:hover {
+    background-color: green;
+    color: white;
+}
+
+.button-container button {
+    clear: both;
+    margin-top: 18px;
+    height: 10vh;
+    width: 10vw;
+    font-size: 4vh;
+    margin-left: 10vw;
+}
+
+.container {
+    display: flex;
+}
+
+#htmlPreviewContainer {
+    margin-top: 4.2vh;
+    display: flex;
+    border: 3px solid #333;
+    width: 900px;
+    height: 69.5vh;
+    margin-left: 25px;
+    background-color: white;
+}
+
+#htmlPreviewFrame {
+    width: 900px;
+    height: 100%;
+    border: none;
+    background-color: none;
+}
+
+.btns button {
+    background-color: #f0f0f0;
+    color: #333;
+    transition: background-color 0.3s;
+}
+
+button:active {
+    background-color: #686767;
+}

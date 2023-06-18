@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Meu Compilador</title>
+    <link rel="stylesheet" href="css.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.min.css" />
+</head>
+
+<body>
+    <h1>Meu Compilador</h1>
+    <button onclick="changeLanguage('html')">HTML</button>
+    <button onclick="changeLanguage('css')">CSS</button>
+    <button onclick="changeLanguage('javascript')">JavaScript</button>
+    <br>
+    <div id="htmlEditor" class="editor"></div>
+    <div id="cssEditor" class="editor" style="display: none;"></div>
+    <div id="jsEditor" class="editor" style="display: none;"></div>
+    <br>
+    <button onclick="clearEditor()">Limpar</button>
+    <button onclick="compileCode()">Compilar</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-language_tools.min.js"></script>
+    <script src="js.js"></script>
+</body>
+
+</html>
