@@ -2,23 +2,38 @@
 <html>
 
 <head>
-    <title>Meu Compilador</title>
+    <title>Cpiler - Compilador HTML/CSS/JS</title>
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/1157/1157123.png">
+
     <link rel="stylesheet" href="css.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.min.css" />
 </head>
 
-<body>
-    <h1>Meu Compilador</h1>
-    <button onclick="changeLanguage('html')">HTML</button>
-    <button onclick="changeLanguage('css')">CSS</button>
-    <button onclick="changeLanguage('javascript')">JavaScript</button>
-    <br>
-    <div id="htmlEditor" class="editor"></div>
-    <div id="cssEditor" class="editor" style="display: none;"></div>
-    <div id="jsEditor" class="editor" style="display: none;"></div>
-    <br>
-    <button onclick="clearEditor()">Limpar</button>
-    <button onclick="compileCode()">Compilar</button>
+<body id="body_">
+    <h1>CPiler</h1>
+    <div class="container">
+
+        <div>
+            <div class="btns">
+                <button class="btn_html" onclick="changeLanguage('html')" onmousedown="toggleActive(this)">HTML</button>
+                <button class="btn_css" onclick="changeLanguage('css')" onmousedown="toggleActive(this)">CSS</button>
+                <button class="btn_js" onclick="changeLanguage('javascript')" onmousedown="toggleActive(this)">JavaScript</button>
+            </div>
+            <div id="htmlEditor" class="editor"></div>
+            <div id="cssEditor" class="editor" style="display: none;"></div>
+            <div id="jsEditor" class="editor" style="display: none;"></div>
+        </div>
+        <div id="htmlPreviewContainer">
+            <iframe id="htmlPreviewFrame"></iframe>
+        </div>
+
+    </div>
+    <div class="button-container">
+        <button onclick="clearEditor()" class="btn-clear">Limpar</button>
+        <button onclick="compileCode()" class="btn-compile">Compilar</button>
+
+    </div>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-language_tools.min.js"></script>
